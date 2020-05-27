@@ -1,13 +1,15 @@
 import React from 'react';
 import './App.css';
 
-import Chart from '../src/components/Chart';
+import MainChart from './components/MainChart/';
+import BarChart from './components/BarChart/';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Chart />
+        <MainChart />
+        <BarChart />
       </header>
     </div>
   );

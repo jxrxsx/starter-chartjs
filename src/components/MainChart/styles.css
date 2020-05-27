@@ -1,0 +1,16 @@
+.container_mainChart {
+    max-width: 50%;
+}
+
+.header {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.header_info {
+    background-color: #DDDDDD ;
+    color: #111111;
+    margin: 1rem;
+    padding: 0.5rem;
+}

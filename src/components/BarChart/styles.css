@@ -1,0 +1,13 @@
+.container_barChart {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.barChart_left {
+    margin: 1rem;
+}
+
+.barChart_right {
+    margin: 1rem;
+}
