@@ -1,0 +1,28 @@
+.dashboard-container {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    box-sizing: border-box;
+}
+
+
+.charts {
+    background-color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+    width: 39.999%;
+    height: 100%;
+}
+
+.table-container {
+    width: 59.999%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
