@@ -3,6 +3,7 @@ import './App.css';
 
 import MainChart from './components/MainChart/';
 import BarChart from './components/BarChart/';
+import Table from './components/Table';
 
 
 function App() {
@@ -13,7 +14,7 @@ function App() {
         <BarChart />
       </main>
       <aside className="table">
-        {/* <Table /> */}
+        <Table />
       </aside>
     </div>
   );
