@@ -30,7 +30,7 @@ class Chart extends Component {
     render() {
 
         return (
-            <div className="container_mainChart">
+            <>
                 <div className="header">
                     <div className="header_info">
                         <h1>949</h1>
@@ -41,32 +41,34 @@ class Chart extends Component {
                         <p>Número de Animais - MTD</p>
                     </div>
                 </div>
-                <div className="doughnut_chart">
-                    <Doughnut data={this.state.chartData}
-                        width={500}
-                        height={500}
-                        options={
-                            {
-                                title: {
-                                    display: true,
-                                    text: 'Nª de Animais por Raça',
-                                    fontSize: 25,
-                                },
-                                legend: {
-                                    display: false,
-                                    position: 'bottom',
+                <div className="container_mainChart">
+                    <div className="doughnut_chart">
+                        <Doughnut data={this.state.chartData}
+                            width={500}
+                            height={500}
+                            options={
+                                {
+                                    title: {
+                                        display: true,
+                                        text: 'Nª de Animais por Raça',
+                                        fontSize: 25,
+                                    },
+                                    legend: {
+                                        display: false,
+                                        position: 'bottom',
 
-                                },
-                                tooltips: {
-                                    enabled: true,
-                                    mode: 'nearest'
+                                    },
+                                    tooltips: {
+                                        enabled: true,
+                                        mode: 'nearest'
+                                    }
                                 }
-                            }
-                        }>
+                            }>
 
-                    </Doughnut>
+                        </Doughnut>
+                    </div>
                 </div>
-            </div>
+            </>
         );
     }
 }

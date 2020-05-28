@@ -6,6 +6,8 @@
     display: flex;
     width: 100%;
     justify-content: space-around;
+    align-items: initial;
+    padding-top: 0;
 }
 
 .header_info {
