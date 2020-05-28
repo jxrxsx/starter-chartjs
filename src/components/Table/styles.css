@@ -18,10 +18,12 @@
 
 .green_cell {
     background-color: #658D1D;
+    text-align: center;
 }
 
 .red_cell {
     background-color: #98302F;
+    text-align: center;
 }
 
 #table_estatisticas th {
