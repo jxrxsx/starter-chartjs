@@ -44,8 +44,8 @@ class Chart extends Component {
                 <div className="container_mainChart">
                     <div className="doughnut_chart">
                         <Doughnut data={this.state.chartData}
-                            width={500}
-                            height={500}
+                            width={800}
+                            height={800}
                             options={
                                 {
                                     title: {
