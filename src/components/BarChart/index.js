@@ -41,7 +41,7 @@ class BarChart extends Component {
                             {
                                 title: {
                                     display: true,
-                                    text: 'Nª de Animais por Raça',
+                                    text: 'Conformidade Fábrica',
                                     fontSize: 25,
                                 },
                                 legend: {
@@ -68,7 +68,7 @@ class BarChart extends Component {
                             {
                                 title: {
                                     display: true,
-                                    text: 'Nª de Animais por Raça',
+                                    text: 'Conformidade Trato',
                                     fontSize: 25,
                                 },
                                 legend: {
