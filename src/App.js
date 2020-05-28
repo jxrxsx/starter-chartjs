@@ -4,13 +4,17 @@ import './App.css';
 import MainChart from './components/MainChart/';
 import BarChart from './components/BarChart/';
 
+
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      <main className="charts">
         <MainChart />
         <BarChart />
-      </header>
+      </main>
+      <aside className="table">
+        {/* <Table /> */}
+      </aside>
     </div>
   );
 }
