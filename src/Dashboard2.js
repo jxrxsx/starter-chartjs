@@ -13,9 +13,9 @@ function Dashboard2() {
         <MainChart />
         <BarChart />
       </main>
-      <aside className="table-container">
+      <div className="table-container">
         <Table />
-      </aside>
+      </div>
     </div>
   );
 }

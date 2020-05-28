@@ -1,7 +1,5 @@
 .dashboard-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
     box-sizing: border-box;
 }
 
@@ -21,8 +19,5 @@
 
 .table-container {
     width: 59.999%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: block;
 }
