@@ -4,6 +4,7 @@ import './styles.css';
 
 function Table() {
     return (
+        <>
             <table id="table_estatisticas">
                 <tr>
                     <th className="col">Indicador</th>
@@ -78,6 +79,7 @@ function Table() {
                     <td className="green_cell">-0.47</td>
                 </tr>
             </table>
+        </>
     );
 }
 

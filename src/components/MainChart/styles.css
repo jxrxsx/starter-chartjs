@@ -4,6 +4,8 @@
 
 .doughnut_chart {
     margin: 30px 0;
+    width: auto;
+    height: auto;
 }
 
 .header {
