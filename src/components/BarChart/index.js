@@ -11,7 +11,7 @@ class BarChart extends Component {
         this.state = {
             chartData: {
                 // precisa alterar o título
-                labels: ['Mestiço Zebu 665', 'Nelore 224'],
+                labels: ['', ''],
                 datasets: [
                     {
                         data: [665, 224, 60],

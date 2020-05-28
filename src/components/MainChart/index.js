@@ -44,8 +44,8 @@ class Chart extends Component {
                 <div className="container_mainChart">
                     <div className="doughnut_chart">
                         <Doughnut data={this.state.chartData}
-                            width={800}
-                            height={800}
+                            // width={300}
+                            // height={300}
                             options={
                                 {
                                     title: {
@@ -61,7 +61,12 @@ class Chart extends Component {
                                     tooltips: {
                                         enabled: true,
                                         mode: 'nearest'
-                                    }
+                                    },
+                                    responsive: true,
+                                    maintainAspectRatio: true,
+                                    // onResize: (<Doughnut />, 300) => {
+
+                                    // }
                                 }
                             }>
 

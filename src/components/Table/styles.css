@@ -1,6 +1,6 @@
 #table_estatisticas {
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-    font-size: 1.40rem;
+    font-size: calc(8px + 1vw);
     border-collapse: collapse;
     width: 100%;
     height: 80%;

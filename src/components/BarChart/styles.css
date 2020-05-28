@@ -4,6 +4,7 @@
     display: flex;
     justify-content: center;
     box-sizing: border-box;
+    font-size: calc(8px + 1vw);
 }
 
 .barChart_left {
