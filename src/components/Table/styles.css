@@ -1,0 +1,31 @@
+#table_estatisticas {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 50vw;
+}
+
+#table_estatisticas td, #table_estatisticas th {
+    border: 5px;
+    padding: 8px;
+}
+
+/* #table_estatisticas th:last-child{background-color: #658D1D;} */
+
+
+#table_estatisticas td:nth-child(3){background-color: #E7E7E7;}
+
+.green_cell {
+    background-color: #658D1D;
+}
+
+.red_cell {
+    background-color: #98302F;
+}
+
+#table_estatisticas th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #013044;
+    color: white;
+}
