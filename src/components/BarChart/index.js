@@ -32,9 +32,9 @@ class BarChart extends Component {
 
         return (
             <div className="container_barChart">
-
                 <div className="barChart_left">
-                    <Bar data={this.state.chartData}
+                    <Bar
+                        data={this.state.chartData}
                         width={500}
                         height={500}
                         options={
@@ -59,7 +59,8 @@ class BarChart extends Component {
                     </Bar>
                 </div>
                 <div className="barChart_right">
-                    <Bar data={this.state.chartData}
+                    <Bar
+                        data={this.state.chartData}
                         width={500}
                         height={500}
                         //inserir o formato de legenda da imagem

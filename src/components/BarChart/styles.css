@@ -1,13 +1,19 @@
 .container_barChart {
     width: 100%;
+    height: auto;
     display: flex;
     justify-content: center;
+    box-sizing: border-box;
 }
 
 .barChart_left {
     margin: 1rem;
+    width: 100%;
+    height: auto;
 }
 
 .barChart_right {
     margin: 1rem;
+    width: 100%;
+    height: auto;
 }

@@ -1,7 +1,7 @@
 .dashboard-container {
     display: flex;
     justify-content: center;
-    align-items: start;
+    align-items: center;
     box-sizing: border-box;
 }
 
