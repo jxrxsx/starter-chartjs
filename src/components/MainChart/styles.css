@@ -2,6 +2,10 @@
     max-width: 50%;
 }
 
+.doughnut_chart {
+    margin: 30px 0;
+}
+
 .header {
     display: flex;
     width: 100%;
