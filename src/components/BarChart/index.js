@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import * as ChartAnnotation from 'chartjs-plugin-annotation';
 import { Bar } from 'react-chartjs-2';
 
 import './styles.css';
@@ -20,6 +21,9 @@ class BarChart extends Component {
                             'rgba(101, 140, 25, 1)',
                             'rgba(215, 170, 6, 1)',
                         ]
+                    },
+                    {
+                      data: 0.9
                     }
                 ],
             }
@@ -37,6 +41,7 @@ class BarChart extends Component {
                         data={this.state.chartData}
                         width={500}
                         height={500}
+                        plugins={[ChartAnnotation]}
                         options={
                             {
                                 title: {
@@ -65,16 +70,26 @@ class BarChart extends Component {
 
                                             },
                                             barPercentage: 0.4,
-                                            threshold: 0.9,
 
                                         },
                                     ],
                                     xAxes: [
                                         {
-                                            barPercentage: 0.4
+                                            barPercentage: 0.8
                                         }
                                     ]
                                 },
+                                annotation: {
+                                  annotations: [{
+                                    type: 'line',
+                                    mode: 'horizontal',
+                                    scaleID: 'y-axis-0',
+                                    value: 0.9,
+                                    borderColor: 'rgb(75, 192, 192)',
+                                    borderWidth: 1,
+                                    borderDash: [4]
+                                  }]
+                                }
                             }
                         }>
 
@@ -85,6 +100,7 @@ class BarChart extends Component {
                         data={this.state.chartData}
                         width={500}
                         height={500}
+                        plugins={[ChartAnnotation]}
                         //inserir o formato de legenda da imagem
                         options={
                             {
@@ -101,6 +117,21 @@ class BarChart extends Component {
                                 tooltips: {
                                     enabled: true,
                                     mode: 'nearest'
+                                },
+                                annotation: {
+                                  annotations: [
+                                    {
+                                      type: "line",
+                                      mode: "vertical",
+                                      scaleID: "x-axis-0",
+                                      borderColor: "red",
+                                      label: {
+                                        content: "",
+                                        enabled: true,
+                                        position: "top"
+                                      }
+                                    }
+                                  ]
                                 }
                             }
                         }>
