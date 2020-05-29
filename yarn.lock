@@ -2798,13 +2798,20 @@ chardet@^0.7.0:
   resolved "https://cglcloud.jfrog.io/cglcloud/api/npm/npm-remote/chardet/-/chardet-0.7.0.tgz#90094849f0937f2eedc2425d0d28a9e5f0cbad9e"
   integrity sha1-kAlISfCTfy7twkJdDSip5fDLrZ4=
 
-chart.js@^2.4.0, chart.js@^2.9.3:
+chart.js@^2.1.5, chart.js@^2.4.0, chart.js@^2.9.3:
   version "2.9.3"
   resolved "https://cglcloud.jfrog.io/cglcloud/api/npm/npm-remote/chart.js/-/chart.js-2.9.3.tgz#ae3884114dafd381bc600f5b35a189138aac1ef7"
   integrity sha1-rjiEEU2v04G8YA9bNaGJE4qsHvc=
   dependencies:
     chartjs-color "^2.1.0"
     moment "^2.10.2"
+
+chart.piecelabel.js@^0.15.0:
+  version "0.15.0"
+  resolved "https://cglcloud.jfrog.io/cglcloud/api/npm/npm-remote/chart.piecelabel.js/-/chart.piecelabel.js-0.15.0.tgz#d28ff4fa3857d1e96d468c0b7cb397ff0c7bd08f"
+  integrity sha1-0o/0+jhX0eltRowLfLOX/wx70I8=
+  dependencies:
+    chart.js "^2.1.5"
 
 chartjs-color-string@^0.6.0:
   version "0.6.0"

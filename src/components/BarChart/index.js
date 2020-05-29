@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import * as ChartAnnotation from 'chartjs-plugin-annotation';
+import * as pluginDataLabels from 'chartjs-plugin-datalabels';
 import { Bar } from 'react-chartjs-2';
+import 'chart.piecelabel.js';
+
 
 import './styles.css';
 
@@ -53,6 +56,8 @@ class BarChart extends Component {
             plugins={[ChartAnnotation]}
             options={
               {
+                // responsive: true,
+                // maintainAspectRatio: true,
                 title: {
                   display: true,
                   text: 'Conformidade Fábrica',
@@ -106,6 +111,35 @@ class BarChart extends Component {
                     borderWidth: 2,
                     borderDash: [4],
                   }]
+                },
+                plugins:{
+
+                  pieceLabel: {
+                    render: (args) => {
+                      return args.value * 100 + '%';
+                    },
+
+                    fontColor: '#fff',
+
+                    fontStyle: 'bold',
+
+                    rotation: -90,
+
+                    overlap: true,
+
+                    showActualPercentages: true,
+                  },
+                  datalabels: {
+                    align: 'end',
+                    rotation: -90,
+                    color: '#fff',
+                    font: {
+                      size: 15,
+                    },
+                    formatter: (value, context) => {
+                      return value * 100 + '%';
+                    }
+                  }
                 }
               }
             }>
@@ -175,6 +209,35 @@ class BarChart extends Component {
                     borderWidth: 2,
                     borderDash: [4],
                   }]
+                },
+                plugins:{
+
+                  pieceLabel: {
+                    render: (args) => {
+                      return args.value * 100 + '%';
+                    },
+
+                    fontColor: '#fff',
+
+                    fontStyle: 'bold',
+
+                    rotation: -90,
+
+                    overlap: true,
+
+                    showActualPercentages: true,
+                  },
+                  datalabels: {
+                    align: 'end',
+                    rotation: -90,
+                    color: '#fff',
+                    font: {
+                      size: 15,
+                    },
+                    formatter: (value, context) => {
+                      return value * 100 + '%';
+                    }
+                  }
                 }
               }
             }>
