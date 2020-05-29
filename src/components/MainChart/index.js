@@ -32,7 +32,7 @@ class Chart extends Component {
             <div className="container_mainChart">
                 <div className="doughnut_chart">
                     <Doughnut data={this.state.chartData}
-                        width={500}
+                        width={410}
                         height={350}
                         options={
                             {
@@ -45,17 +45,32 @@ class Chart extends Component {
                                   position: 'bottom'
                                 },
                                 tooltips: {
-                                    enabled: true,
+                                    enabled: false,
                                 },
                                 responsive: true,
                                 pieceLabel: {
-                                  render: (args) => {return( args.label+" "+args.value + ' (' + args.percentage +'%)')},
+                                  render: (args) => {return( args.label+" ("+args.value+")")},
                                   fontColor: 'black',
                                   fontStyle: 'bold',
                                   position: 'outside',
-                                  overlap: true,
-                                  segment: true
+                                //   overlap: true
                                 },
+                                plugins: {
+                                  datalabels: {
+                                    color: '#eee',
+                                    fontWeight: 'bold',
+                                    value: 'percentage',
+                                    formatter: (value, ctx) => {
+                                      let sum = 0;
+                                      let dataArr = ctx.chart.data.datasets[0].data;
+                                      dataArr.map(data => {
+                                          sum += data;
+                                      });
+                                      let percentage = (value*100 / sum).toFixed(2)+"%";
+                                      return percentage;
+                                    },
+                                  }
+                                }
                             }
                         }>
 

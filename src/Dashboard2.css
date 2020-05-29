@@ -91,7 +91,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    padding: 50px 10px 20px 10px;
+    padding: 60px 10px 20px 10px;
   }
 
   .table-container {
@@ -107,11 +107,13 @@
     position: fixed;
     top: 0;
     width: 100%;
+    padding: 0.5em;
   }
 
   .menu ul {
     display: flex;
-    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
   }
 
   .charts {

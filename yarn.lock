@@ -2835,6 +2835,11 @@ chartjs-plugin-annotation@^0.5.7:
   dependencies:
     chart.js "^2.4.0"
 
+chartjs-plugin-datalabels@^0.7.0:
+  version "0.7.0"
+  resolved "https://cglcloud.jfrog.io/cglcloud/api/npm/npm-remote/chartjs-plugin-datalabels/-/chartjs-plugin-datalabels-0.7.0.tgz#f72e44edb2db45ef68913e9320bcc50398a205e6"
+  integrity sha1-9y5E7bLbRe9okT6TILzFA5iiBeY=
+
 chokidar@^2.1.8:
   version "2.1.8"
   resolved "https://cglcloud.jfrog.io/cglcloud/api/npm/npm-remote/chokidar/-/chokidar-2.1.8.tgz#804b3a7b6a99358c3c5c61e71d8728f041cff917"
@@ -8666,6 +8671,13 @@ react-error-overlay@^6.0.7:
   version "6.0.7"
   resolved "https://cglcloud.jfrog.io/cglcloud/api/npm/npm-remote/react-error-overlay/-/react-error-overlay-6.0.7.tgz#1dcfb459ab671d53f660a991513cb2f0a0553108"
   integrity sha1-Hc+0WatnHVP2YKmRUTyy8KBVMQg=
+
+react-icons@^3.10.0:
+  version "3.10.0"
+  resolved "https://cglcloud.jfrog.io/cglcloud/api/npm/npm-remote/react-icons/-/react-icons-3.10.0.tgz#6c217a2dde2e8fa8d293210023914b123f317297"
+  integrity sha1-bCF6Ld4uj6jSkyEAI5FLEj8xcpc=
+  dependencies:
+    camelcase "^5.0.0"
 
 react-is@^16.12.0, react-is@^16.8.1, react-is@^16.8.4:
   version "16.13.1"

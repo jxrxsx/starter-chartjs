@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import * as ChartAnnotation from 'chartjs-plugin-annotation';
-import * as pluginDataLabels from 'chartjs-plugin-datalabels';
 import { Bar } from 'react-chartjs-2';
 import 'chart.piecelabel.js';
+import 'chartjs-plugin-datalabels';
 
 
 import './styles.css';
@@ -53,7 +52,6 @@ class BarChart extends Component {
             data={this.state.chartData}
             width={500}
             height={500}
-            plugins={[ChartAnnotation]}
             options={
               {
                 // responsive: true,
@@ -151,7 +149,6 @@ class BarChart extends Component {
             data={this.state.chartData}
             width={500}
             height={500}
-            plugins={[ChartAnnotation]}
             options={
               {
                 title: {
