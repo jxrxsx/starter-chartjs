@@ -85,7 +85,7 @@
 }
 
 @media only screen and (max-width: 320px) {
-  .doughnut_char canvas {
+  .doughnut_char .chartjs-size-monitor canvas {
     width: 320px;
   }
 }
