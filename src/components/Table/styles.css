@@ -33,3 +33,7 @@
     background-color: #013044;
     color: white;
 }
+
+#table_estatisticas thead tr {
+  margin-bottom: 10px;
+}

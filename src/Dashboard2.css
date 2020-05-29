@@ -102,10 +102,6 @@
     overflow-y: hidden;
   }
 
-  #table_estatisticas {
-    table-layout: auto;
-  }
-
   .menu {
     position: fixed;
     top: 0;
