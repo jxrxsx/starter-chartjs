@@ -2,7 +2,7 @@ import React from 'react';
 import './Dashboard2.css';
 
 import MainChart from './components/MainChart';
-import BarChart from './components/BarChart';
+import BarChartContainer from './components/BarChartContainer';
 import Table from './components/Table';
 
 
@@ -20,7 +20,7 @@ function Dashboard2() {
       <div className="dashboard-container">
         <main className="charts">
           <MainChart />
-          <BarChart />
+          <BarChartContainer />
         </main>
         <div className="table-container" align="center">
           <Table />

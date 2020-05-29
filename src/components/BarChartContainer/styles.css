@@ -1,0 +1,21 @@
+.container_barChart {
+    width: 100%;
+    max-width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    font-size: calc(8px + 1vw);
+}
+
+.barChart_left {
+    width: 49.999%;
+    height: 100%;
+}
+
+.barChart_right {
+    width: 49.999%;
+    height: 100%;
+}
