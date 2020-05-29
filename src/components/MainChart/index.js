@@ -54,8 +54,10 @@ class Chart extends Component {
                                         fontSize: 25,
                                     },
                                     legend: {
-                                        display: false,
+                                        display: true,
                                         position: 'bottom',
+                                        fullWidth: true,
+                                        align: 'start'
 
                                     },
                                     tooltips: {

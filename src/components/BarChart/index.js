@@ -14,11 +14,11 @@ class BarChart extends Component {
                 labels: ['', ''],
                 datasets: [
                     {
-                        data: [665, 224, 60],
+                        data: [0.9345, 0.9592],
                         backgroundColor: [
                             // precisa alterar essas cores
-                            'rgba(2, 12, 126, 1)',
-                            'rgba(1, 120, 0, 1)',
+                            'rgba(101, 140, 25, 1)',
+                            'rgba(215, 170, 6, 1)',
                         ]
                     }
                 ],
@@ -52,7 +52,29 @@ class BarChart extends Component {
                                 tooltips: {
                                     enabled: true,
                                     mode: 'nearest'
-                                }
+                                },
+                                scales: {
+                                    yAxes: [
+                                        {
+                                            ticks: {
+                                                callback: function (value) {
+                                                    return value.toLocaleString('pt-BR', { style: 'percent', maximumSignificantDigits: 3 });
+                                                },
+                                                beginAtZero: true,
+                                                stepSize: 0.2,
+
+                                            },
+                                            barPercentage: 0.4,
+                                            threshold: 0.9,
+
+                                        },
+                                    ],
+                                    xAxes: [
+                                        {
+                                            barPercentage: 0.4
+                                        }
+                                    ]
+                                },
                             }
                         }>
 
