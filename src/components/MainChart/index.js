@@ -9,7 +9,7 @@ class Chart extends Component {
 
   state = {
       chartData: {
-          labels: ['Mestiço Zebu 665', 'Nelore 224', 'Industrial 60'],
+          labels: ['Mestiço Zebu', 'Nelore', 'Industrial'],
           datasets: [
               {
                   data: [665, 224, 60],
@@ -32,7 +32,7 @@ class Chart extends Component {
             <div className="container_mainChart">
                 <div className="doughnut_chart">
                     <Doughnut data={this.state.chartData}
-                        width={350}
+                        width={500}
                         height={350}
                         options={
                             {
@@ -42,20 +42,20 @@ class Chart extends Component {
                                   fontSize: 25,
                                 },
                                 legend: {
-                                  position: 'top',
-                                  fullWidth: true,
+                                  position: 'bottom'
                                 },
                                 tooltips: {
                                     enabled: true,
-                                    mode: 'nearest'
                                 },
                                 responsive: true,
-                                maintainAspectRatio: true,
                                 pieceLabel: {
-                                  render: 'value',
-                                  fontColor: 'white',
+                                  render: (args) => {return( args.label+" "+args.value + ' (' + args.percentage +'%)')},
+                                  fontColor: 'black',
                                   fontStyle: 'bold',
-                                }
+                                  position: 'outside',
+                                  overlap: true,
+                                  segment: true
+                                },
                             }
                         }>
 
