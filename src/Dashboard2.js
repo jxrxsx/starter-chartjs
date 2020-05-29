@@ -22,7 +22,7 @@ function Dashboard2() {
           <MainChart />
           <BarChart />
         </main>
-        <div className="table-container">
+        <div className="table-container" align="center">
           <Table />
         </div>
       </div>
