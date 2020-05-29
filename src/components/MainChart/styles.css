@@ -4,28 +4,3 @@
     width: auto;
     height: auto;
 }
-
-.header {
-    display: flex;
-    width: 100%;
-    justify-content: space-around;
-    align-items: initial;
-    padding-top: 0;
-}
-
-.header_info {
-    background-color: #DDDDDD ;
-    color: #111111;
-    margin: 0 2px;
-    padding: 0px 5px;
-    text-align: center;
-    width: 50%;
-}
-
-.header_info h1 {
-    line-height: 10px;
-    font-size: calc(15px + 1vw);
-}
-.header_info p {
-  font-size: calc(5px + 1vw);
-}
