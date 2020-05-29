@@ -6,141 +6,184 @@ import './styles.css';
 
 class BarChart extends Component {
 
-    constructor(props) {
-        super(props);
+  constructor(props) {
+    super(props);
 
-        this.state = {
-            chartData: {
-                // precisa alterar o título
-                labels: ['', ''],
-                datasets: [
+    this.state = {
+      chartData: {
+        labels: [''],
+        datasets: [
+          {
+            label: ['YTD Fábrica'],
+            maxBarThickness: 100,
+            data: [0.9345],
+            backgroundColor: [
+              'rgba(101, 140, 25, 1)',
+            ]
+          },
+          {
+            label: ['MTD Fábrica'],
+            maxBarThickness: 100,
+            data: [0.9592],
+            backgroundColor: [
+              'rgba(215, 170, 6, 1)',
+            ]
+          },
+          {
+            label: '90%',
+            backgroundColor: 'rgb(75, 192, 192)',
+            data: 0.9
+          }
+        ],
+      }
+
+    };
+
+  }
+
+  render() {
+
+    return (
+      <div className="container_barChart">
+        <div className="barChart_left">
+          <Bar
+            data={this.state.chartData}
+            width={500}
+            height={500}
+            plugins={[ChartAnnotation]}
+            options={
+              {
+                title: {
+                  display: true,
+                  text: 'Conformidade Fábrica',
+                  fontSize: 25,
+                },
+                legend: {
+                  display: true,
+                  position: 'top',
+                  align: 'start',
+                  labels: {
+                    fontColor: '#111111',
+                    fontSize: 10,
+                    fontFamily: 'Helvetica',
+                    usePointStyle: true,
+                    boxWidth: 5,
+                  }
+                },
+                tooltips: {
+                  enabled: true,
+                  mode: 'nearest',
+                },
+                scales: {
+                  yAxes: [
                     {
-                        data: [0.9345, 0.9592],
-                        backgroundColor: [
-                            // precisa alterar essas cores
-                            'rgba(101, 140, 25, 1)',
-                            'rgba(215, 170, 6, 1)',
-                        ]
+                      ticks: {
+                        callback: function (value) {
+                          return value.toLocaleString('pt-BR', { style: 'percent', maximumSignificantDigits: 3 });
+                        },
+                        beginAtZero: true,
+                        stepSize: 0.2,
+
+                      },
                     },
+                  ],
+                  xAxes: [
                     {
-                      data: 0.9
+                      ticks: {
+                        stepSize: 0.5,
+                        beginAtZero: false
+                      }
                     }
-                ],
-            }
+                  ]
+                },
+                annotation: {
+                  annotations: [{
+                    type: 'line',
+                    mode: 'horizontal',
+                    scaleID: 'y-axis-0',
+                    value: 0.9,
+                    borderColor: 'rgb(75, 192, 192)',
+                    borderWidth: 2,
+                    borderDash: [4],
+                  }]
+                }
+              }
+            }>
 
-        };
+          </Bar>
+        </div>
+        <div className="barChart_right">
+          <Bar
+            data={this.state.chartData}
+            width={500}
+            height={500}
+            plugins={[ChartAnnotation]}
+            options={
+              {
+                title: {
+                  display: true,
+                  text: 'Conformidade Fábrica',
+                  fontSize: 25,
+                },
+                legend: {
+                  display: true,
+                  position: 'top',
+                  align: 'start',
+                  labels: {
+                    fontColor: '#111111',
+                    fontSize: 10,
+                    fontFamily: 'Helvetica',
+                    usePointStyle: true,
+                    boxWidth: 5,
+                  }
 
-    }
+                },
+                tooltips: {
+                  enabled: true,
+                  mode: 'nearest'
+                },
+                scales: {
+                  yAxes: [
+                    {
+                      ticks: {
+                        callback: function (value) {
+                          return value.toLocaleString('pt-BR', { style: 'percent', maximumSignificantDigits: 3 });
+                        },
+                        beginAtZero: true,
+                        stepSize: 0.2,
 
-    render() {
+                      },
+                    },
+                  ],
+                  xAxes: [
+                    {
+                      ticks: {
 
-        return (
-            <div className="container_barChart">
-                <div className="barChart_left">
-                    <Bar
-                        data={this.state.chartData}
-                        width={500}
-                        height={500}
-                        plugins={[ChartAnnotation]}
-                        options={
-                            {
-                                title: {
-                                    display: true,
-                                    text: 'Conformidade Fábrica',
-                                    fontSize: 25,
-                                },
-                                legend: {
-                                    display: false,
-                                    position: 'bottom',
+                        stepSize: 0.5,
+                        beginAtZero: false
+                      }
+                    }
+                  ]
+                },
+                annotation: {
+                  annotations: [{
+                    type: 'line',
+                    mode: 'horizontal',
+                    scaleID: 'y-axis-0',
+                    value: 0.9,
+                    borderColor: 'rgb(75, 192, 192)',
+                    borderWidth: 2,
+                    borderDash: [4],
+                  }]
+                }
+              }
+            }>
 
-                                },
-                                tooltips: {
-                                    enabled: true,
-                                    mode: 'nearest'
-                                },
-                                scales: {
-                                    yAxes: [
-                                        {
-                                            ticks: {
-                                                callback: function (value) {
-                                                    return value.toLocaleString('pt-BR', { style: 'percent', maximumSignificantDigits: 3 });
-                                                },
-                                                beginAtZero: true,
-                                                stepSize: 0.2,
-
-                                            },
-                                            barPercentage: 0.4,
-
-                                        },
-                                    ],
-                                    xAxes: [
-                                        {
-                                            barPercentage: 0.8
-                                        }
-                                    ]
-                                },
-                                annotation: {
-                                  annotations: [{
-                                    type: 'line',
-                                    mode: 'horizontal',
-                                    scaleID: 'y-axis-0',
-                                    value: 0.9,
-                                    borderColor: 'rgb(75, 192, 192)',
-                                    borderWidth: 1,
-                                    borderDash: [4]
-                                  }]
-                                }
-                            }
-                        }>
-
-                    </Bar>
-                </div>
-                <div className="barChart_right">
-                    <Bar
-                        data={this.state.chartData}
-                        width={500}
-                        height={500}
-                        plugins={[ChartAnnotation]}
-                        //inserir o formato de legenda da imagem
-                        options={
-                            {
-                                title: {
-                                    display: true,
-                                    text: 'Conformidade Trato',
-                                    fontSize: 25,
-                                },
-                                legend: {
-                                    display: false,
-                                    position: 'bottom',
-
-                                },
-                                tooltips: {
-                                    enabled: true,
-                                    mode: 'nearest'
-                                },
-                                annotation: {
-                                  annotations: [
-                                    {
-                                      type: "line",
-                                      mode: "vertical",
-                                      scaleID: "x-axis-0",
-                                      borderColor: "red",
-                                      label: {
-                                        content: "",
-                                        enabled: true,
-                                        position: "top"
-                                      }
-                                    }
-                                  ]
-                                }
-                            }
-                        }>
-
-                    </Bar>
-                </div>
-            </div>
-        );
-    }
+          </Bar>
+        </div>
+      </div>
+    );
+  }
 }
 
 export default BarChart;
