@@ -15,7 +15,7 @@ class BarChartContainer extends Component {
     super(props);
 
     this.state = {
-      chartData: {
+      chartData1: {
         labels: [''],
         datasets: [
           {
@@ -34,14 +34,40 @@ class BarChartContainer extends Component {
               'rgba(215, 170, 6, 1)',
             ]
           },
+          // {
+          //   label: '90%',
+          //   backgroundColor: 'rgb(75, 192, 192)',
+          //   data: 0.9
+          // }
+        ],
+      },
+      chartData2: {
+        labels: [''],
+        datasets: [
           {
-            label: '90%',
-            backgroundColor: 'rgb(75, 192, 192)',
-            data: 0.9
-          }
+            label: ['YTD Fábrica'],
+            maxBarThickness: 100,
+            data: [0.9919],
+            backgroundColor: [
+              'rgba(101, 140, 25, 1)',
+            ]
+          },
+          {
+            label: ['MTD Fábrica'],
+            maxBarThickness: 100,
+            data: [0.9944],
+            backgroundColor: [
+              'rgba(215, 170, 6, 1)',
+            ]
+          },
+          // {
+          //   // threshold
+          //   label: '90%',
+          //   backgroundColor: 'rgb(75, 192, 192)',
+          //   data: 0.9
+          // }
         ],
       }
-
     };
 
   }
@@ -51,10 +77,10 @@ class BarChartContainer extends Component {
     return (
       <div className="container_barChart">
         <div className="barChart_left">
-          <BarChart title="Conformidade Fábrica" chartData={this.state.chartData}/>
+          <BarChart title="Conformidade Fábrica" chartData={this.state.chartData1} />
         </div>
         <div className="barChart_right">
-          <BarChart title="Conformidade Trato" chartData={this.state.chartData}/>
+          <BarChart title="Conformidade Trato" chartData={this.state.chartData2} />
         </div>
       </div>
     );
