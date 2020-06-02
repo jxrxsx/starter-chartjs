@@ -5,35 +5,35 @@ import MainChart from './components/MainChart';
 import BarChartContainer from './components/BarChartContainer';
 import Table from './components/Table';
 
-import { BsList, BsCheckAll } from 'react-icons/bs';
-
+import MenuCollapse from './components/MenuCollapse'
+import Menu from './components/Menu'
 
 class Dashboard2 extends React.Component {
   state = {
-    displayUL: 'flex'
+    displayUL: 'flex',
+    width: window.innerWidth
   }
 
-  toggleCollapse = () => {
-    if(this.state.displayUL === 'flex') {
-      this.setState({ displayUL: 'none' });
-    } else {
-      this.setState({ displayUL: 'flex'})
-    }
-    let menu = document.querySelector('#menu-options')
-    menu.style.display = this.state.displayUL;
+  componentDidMount = () => {
+
+    window.addEventListener('resize', this.handleResize);
   }
 
+  handleResize = () => {
+    this.setState({ width: window.innerWidth})
+  }
+
+  componentWillUnmount = () => {
+    window.removeEventListener('resize');
+  }
   render() {
     return (
       <div className="container">
-        <div className="menu">
-          <div id="hamburger" onClick={this.toggleCollapse} align="right"><BsList /></div>
-          <ul id="menu-options" align="center">
-            <li><a href="#">INICIO</a></li>
-            <li className="active"><a href="#">DASHBOARD</a></li>
-            <li><a href="#">ECONOMICO</a></li>
-          </ul>
-        </div>
+        {this.state.width < 1000 ?
+          <MenuCollapse />
+          :
+          <Menu />
+        }
         <div className="dashboard-container">
           <main className="charts">
             <MainChart />
