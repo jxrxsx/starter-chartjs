@@ -67,8 +67,12 @@ class Chart extends Component {
                         dataArr.map(data => {
                           sum += data;
                         });
-                        let percentage = (value * 100 / sum).toFixed(2) + "%";
-                        return percentage;
+                        if(window.innerWidth > 425) {
+                          let percentage = (value * 100 / sum).toFixed(2) + "%";
+                          return percentage;
+                        } else {
+                          return "";
+                        }
                       },
                     }
                   }

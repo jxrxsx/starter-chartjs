@@ -21,7 +21,7 @@
     align-items: center;
     font-size: calc(5px + 2vw);
     color: white;
-    width: 49.999%;
+    width: 580px;
     height: 100%;
 }
 
@@ -61,6 +61,20 @@
     text-decoration: none;
     color: white;
 }
+
+.menu #hamburger {
+  display: none;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#hamburger svg {
+  height: 2em;
+  width: 3em;
+  padding: 5px;
+  color: white;
+}
+
 
 .footer {
     display: flex;
@@ -105,10 +119,11 @@
   }
 
   .menu ul {
-    display: flex;
+    display: none;
     flex-direction: row;
     width: 100%;
   }
+
 
   .charts {
     width: 100%;
@@ -161,9 +176,13 @@
   }
 
   .menu ul {
-    display: flex;
+    display: none;
     flex-direction: row;
     width: 100%;
+  }
+
+  .menu #hamburger {
+    display: flex;
   }
 
   .charts {
@@ -212,7 +231,7 @@
   }
 }
 
-@media only screen and (min-width: 701px) and (max-width: 769px)   {
+@media only screen and (min-width: 701px) and (max-width: 1000px)   {
   .container {
     flex-direction: column;
     justify-content: center;
@@ -240,9 +259,13 @@
   }
 
   .menu ul {
-    display: flex;
+    display: none;
     justify-content: flex-start;
     align-items: center;
+  }
+
+  .menu #hamburger {
+    display: flex;
   }
 
   .charts {
@@ -263,5 +286,11 @@
     padding-left: 0;
     margin-left: 0;
   }
-
 }
+
+/* @media only screen and (max-width: 1001px) {
+
+  .menu ul {
+    display: flex;
+  }
+} */
